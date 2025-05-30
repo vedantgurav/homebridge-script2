@@ -204,7 +204,7 @@ script2Accessory.prototype.getServices = function () {
       }
     }.bind(this);
 
-    const watcher = chokidar.watch(this.fileState, { alwaysStat: true, ignoreInitial: true });
+    const watcher = chokidar.watch(this.fileState, { alwaysStat: true });
     watcher.on("add", fileCreatedHandler);
     watcher.on("unlink", fileRemovedHandler);
   }
